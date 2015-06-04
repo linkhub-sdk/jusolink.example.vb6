@@ -161,10 +161,9 @@ Private Sub btnUnitCost_Click()
 End Sub
 '주소검색폼 호출
 Private Sub btnSearchForm_Click()
-     searchForm.linkID = linkID
-     searchForm.SecretKey = SecretKey
      searchForm.Show
 End Sub
+
 Private Sub Form_Activate()
     txtZipcode.Text = zipcode
     txtSectionNum.Text = sectionNum
@@ -175,6 +174,7 @@ Private Sub Form_Activate()
         txtAddress.SelStart = Len(txtAddress.Text)
     End If
 End Sub
+
 Private Sub Form_Load()
     JusolinkService.Initialize linkID, SecretKey
 End Sub

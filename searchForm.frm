@@ -203,13 +203,15 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-Public linkID As String
-Public SecretKey As String
-Public pageNum As Integer
-Public suggestIndex As String
+'링크아이디
+Private Const linkID = "TESTER_JUSO"
+'비밀키. 유출에 주의하시기 바랍니다.
+Private Const SecretKey = "FjaRgAfVUPvSDHTrdd/uw/dt/Cdo3GgSFKyE1+NQ+bc="
+
+Private pageNum As Integer
+Private suggestIndex As String
 
 Private JusolinkService As New Jusolink
-
 '검색 버튼
 Private Sub btnSearch_Click()
     Dim searchInfo As SearchResult
