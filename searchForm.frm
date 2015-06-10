@@ -268,6 +268,7 @@ Private Sub btnSearch_Click()
                 ListView1.ListItems(i).SubItems(3) = searchInfo.juso.Item(i).roadAddr2      '도로명주소 부가정보
                 ListView1.ListItems(i).SubItems(4) = searchInfo.juso.Item(i).jibunAddr      '지번주소
                
+                relatedJibun = ""
                 
                 If (searchInfo.juso.Item(i).relatedJibun Is Nothing) = False Then
                     For k = 1 To searchInfo.juso.Item(i).relatedJibun.Count
